@@ -1,6 +1,6 @@
 <script>
 	import '../style.css';
-	import tmdb from '../images/moviedb.svg';
+	import tmdb from '$lib/images/moviedb.svg';
 </script>
 
 <nav>
