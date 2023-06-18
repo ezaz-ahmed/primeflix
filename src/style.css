@@ -32,3 +32,11 @@ img {
 	width: 100%;
 	height: auto;
 }
+
+.column {
+	padding-left: var(--side);
+	padding-right: var(--side);
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--column);
+}
