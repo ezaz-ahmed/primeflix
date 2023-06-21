@@ -27,21 +27,85 @@
 </a>
 
 <style>
-	a {
-		display: flex;
+	.featured {
+		position: relative;
+		display: grid;
+		background: black;
 	}
 
-	.backdrop {
+	.backdrop img {
 		width: 100%;
+		display: block;
 	}
 
-	.logo {
+	.backdrop::after {
+		content: '';
 		position: absolute;
-		left: 1rem;
-		top: 0;
-		height: 100%;
-		width: 30%;
-		object-fit: contain;
-		filter: drop-shadow(0 0 1rem black);
+		width: 100%;
+		height: 8rem;
+		left: 0;
+		bottom: 0;
+		background: linear-gradient(to top, black, transparent);
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		bottom: 0;
+		width: 100%;
+		padding: var(--side);
+		margin-top: -4rem;
+		gap: 1rem;
+	}
+
+	.info h1,
+	.info p {
+		margin: 0;
+	}
+
+	.info p {
+		max-width: 40ch;
+	}
+
+	button {
+		background: var(--accent);
+		border: none;
+		color: black;
+		padding: 1rem;
+	}
+
+	button:active {
+		filter: brightness(0.9);
+	}
+
+	@media (min-width: 80em) {
+		.featured {
+			grid-template-columns: 1fr 80em;
+			grid-template-rows: auto;
+		}
+
+		.info {
+			position: absolute;
+			justify-content: center;
+			top: 0;
+			left: 0;
+			width: 40em;
+			height: 100%;
+			grid-column: 1/2;
+			margin: 0;
+		}
+
+		.backdrop {
+			grid-column: 2/3;
+		}
+
+		.backdrop::after {
+			width: 15rem;
+			height: 100%;
+			left: 100px;
+			left: 0;
+			bottom: 0;
+			background: linear-gradient(to right, black, transparent);
+		}
 	}
 </style>
