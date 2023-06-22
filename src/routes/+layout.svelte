@@ -22,10 +22,9 @@
 </main>
 
 <footer>
-	Data provided by
-	<a href="https://www.themoviedb.org/" target="_blank">
-		<img src={tmdb} alt="The Movie DB" />
-	</a>
+	<p>
+		Data provided by <a href="https://www.themoviedb.org/"><img alt="The Movie DB" src={tmdb} /></a>
+	</p>
 </footer>
 
 <style>
@@ -38,11 +37,6 @@
 		max-width: var(--column);
 		padding: 0 var(--side);
 		color: var(--accent);
-	}
-
-	a {
-		color: inherit;
-		text-decoration: none;
 	}
 
 	.logo a {
@@ -68,7 +62,11 @@
 
 	footer {
 		display: flex;
-		justify-content: center;
 		height: 5rem;
+		align-items: center;
+	}
+
+	a {
+		text-decoration: none;
 	}
 </style>
