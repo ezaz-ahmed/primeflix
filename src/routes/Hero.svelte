@@ -5,12 +5,16 @@
 	export let movie: MovieDetails;
 
 	$: images = movie.images;
-	$: backdrop = images.backdrops.find((image) => !image.iso_639_1) || images.backdrops[0];
+	$: backdrop =
+		images.backdrops.find((image) => !image.iso_639_1) ||
+		images.backdrops[0];
 
-	$: logo = images.logos.find((image) => image.iso_639_1 === 'en') || images.logos[0];
+	$: logo =
+		images.logos.find((image) => image.iso_639_1 === 'en') ||
+		images.logos[0];
 </script>
 
-<a href="/movie/{movie.id}">
+<a href="/movies/{movie.id}">
 	<img
 		class="backdrop"
 		src={media(backdrop.file_path, 1280)}

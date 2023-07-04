@@ -15,7 +15,7 @@
 
 <div class="carousel">
 	{#each movies as movie}
-		<a href="/movie/{movie.id}">
+		<a href="/movies/{movie.id}">
 			<img src={media(movie.poster_path, 500)} alt={movie.title} />
 		</a>
 	{/each}
@@ -23,7 +23,10 @@
 
 <style>
 	.carousel {
-		--padding: max(var(--side), calc(var(--side) + (100vw - var(--column)) / 2));
+		--padding: max(
+			var(--side),
+			calc(var(--side) + (100vw - var(--column)) / 2)
+		);
 		display: flex;
 		height: clamp(10rem, 25vw, 20rem);
 		overflow-x: auto;

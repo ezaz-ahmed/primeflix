@@ -8,13 +8,13 @@ export async function get(fetch: typeof globalThis.fetch, endpoint: string, para
   const url = `${baseUrl}/${endpoint}?${q}`
 
   if (cache.has(url)) {
-    console.log("cache hit", url)
     return cache.get(url)
   }
 
   const response = await fetch(url)
   const data = response.json()
 
+  cache.set(url, data)
 
   return data
 }
