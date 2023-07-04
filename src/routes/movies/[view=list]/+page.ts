@@ -15,6 +15,7 @@ export const load = async ({ params, url, fetch }) => {
     title: view.title,
     endpoint: view.endpoint,
     movies: data.results,
-    next_page: data.page < data.total_pages ? data.page + 1 : null
+    next_page: data.page < data.total_pages ? data.page + 1 : null,
+    infinite: true
   }
 } 

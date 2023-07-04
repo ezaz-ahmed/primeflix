@@ -6,7 +6,9 @@
 	export let data;
 
 	$: images = data.featured.images;
-	$: backdrop = images.backdrops.find((image) => !image.iso_639_1) || images.backdrops[0];
+	$: backdrop =
+		images.backdrops.find((image) => !image.iso_639_1) ||
+		images.backdrops[0];
 	$: logo = images.logos.find((image) => image.iso_639_1 === 'en');
 </script>
 
@@ -36,11 +38,23 @@
 	</a>
 </div>
 
-<Carousel view={views.upcoming} href="/movies/trending" movies={data.trending.results} />
+<Carousel
+	view={views.upcoming}
+	href="/movies/upcoming"
+	movies={data.upcoming.results}
+/>
 
-<Carousel view={views.now_playing} href="/movies/now_playing" movies={data.now_playing.results} />
+<Carousel
+	view={views.now_playing}
+	href="/movies/now_playing"
+	movies={data.now_playing.results}
+/>
 
-<Carousel view={views.upcoming} href="/movies/upcoming" movies={data.upcoming.results} />
+<Carousel
+	view={views.trending}
+	href="/movies/trending"
+	movies={data.trending.results}
+/>
 
 <style>
 	a {

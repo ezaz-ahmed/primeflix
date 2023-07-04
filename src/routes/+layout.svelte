@@ -1,5 +1,6 @@
 <script>
 	import '../style.css';
+	import { page } from '$app/stores';
 	import tmdb from '$lib/images/moviedb.svg';
 </script>
 
@@ -17,13 +18,15 @@
 	</div>
 </nav>
 
-<main>
+<main class:infinite={$page.data.infinite}>
 	<slot />
 </main>
 
 <footer>
 	<p>
-		Data provided by <a href="https://www.themoviedb.org/"><img alt="The Movie DB" src={tmdb} /></a>
+		Data provided by <a href="https://www.themoviedb.org/"
+			><img alt="The Movie DB" src={tmdb} /></a
+		>
 	</p>
 </footer>
 
@@ -60,10 +63,17 @@
 		gap: 1rem;
 	}
 
+	main.infinite {
+		height: 0;
+		flex: 1;
+		overflow: hidden;
+	}
+
 	footer {
 		display: flex;
 		height: 5rem;
 		align-items: center;
+		justify-content: center;
 	}
 
 	a {
