@@ -4,7 +4,7 @@
 	import type { View } from '$lib/views';
 
 	export let view: View;
-	export let href: string;
+	export let href: string | null;
 	export let movies: MovieListResult[];
 </script>
 

@@ -10,7 +10,7 @@
 
 	let viewport: HTMLDivElement;
 	let results: HTMLDivElement;
-	let item_width: number;
+
 	let item_height: number;
 	let num_columns = 4;
 
@@ -22,7 +22,6 @@
 	function handle_resize() {
 		const first = results.firstChild as HTMLAnchorElement;
 
-		item_width = first.offsetWidth;
 		item_height = first.offsetHeight;
 
 		num_columns = 4;
