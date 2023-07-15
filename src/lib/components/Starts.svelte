@@ -32,7 +32,7 @@
 	}
 
 	.stroke {
-		background: url($lib/images/star-outline.svg);
+		background: url($lib/images/star.svg);
 	}
 
 	.fill {
