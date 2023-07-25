@@ -36,4 +36,8 @@
 	input:focus-visible {
 		outline: 2px solid var(--accent);
 	}
+
+	div {
+		min-height: 80vh;
+	}
 </style>

@@ -4,7 +4,7 @@
 	import tmdb from '$lib/images/moviedb.svg';
 </script>
 
-<nav>
+<nav class=" column">
 	<div class="logo">
 		<a href="/">
 			Svelti <span>Prime</span>
@@ -24,9 +24,10 @@
 
 <footer>
 	<p>
-		Data provided by <a href="https://www.themoviedb.org/"
-			><img alt="The Movie DB" src={tmdb} /></a
-		>
+		Data provided by
+		<a href="https://www.themoviedb.org/">
+			<img alt="The Movie DB" src={tmdb} />
+		</a>
 	</p>
 </footer>
 
