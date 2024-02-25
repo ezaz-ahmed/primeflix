@@ -2,6 +2,7 @@
 	import { media } from '$lib/api.js';
 	import Carousel from '$lib/components/Carousel.svelte';
 	import { views } from '$lib/views.js';
+	import PrimeflixLogo from '$lib/images/primeflix.png';
 
 	export let data;
 
@@ -11,10 +12,6 @@
 		images.backdrops[0];
 	$: logo = images.logos.find((image) => image.iso_639_1 === 'en');
 </script>
-
-<svelte:head>
-	<title>Svelti Prime</title>
-</svelte:head>
 
 <div class="column">
 	<h1>Today's top movies</h1>

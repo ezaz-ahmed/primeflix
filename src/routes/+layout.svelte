@@ -2,12 +2,29 @@
 	import '../style.css';
 	import { page } from '$app/stores';
 	import tmdb from '$lib/images/moviedb.svg';
+	import PrimeflixLogo from '$lib/images/primeflix.png';
 </script>
+
+<svelte:head>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+	<meta name="msapplication-TileColor" content="#f3f3f3" />
+	<meta name="theme-color" content="#ffffff" />
+
+	<title>Primeflix</title>
+	<meta
+		name="description"
+		content="Experience Netflix in Svelte style with Primeflix! Dive into the Svelteflix world and enjoy seamless streaming with our innovative platform. Explore now!"
+	/>
+</svelte:head>
 
 <nav class=" column">
 	<div class="logo">
 		<a href="/">
-			Svelti <span>Prime</span>
+			<img src={PrimeflixLogo} alt="Primeflix Logo" />
 		</a>
 	</div>
 
@@ -39,24 +56,13 @@
 		align-items: center;
 		justify-content: space-between;
 		max-width: var(--column);
-		padding: 0 var(--side);
+		padding: 1rem var(--side) 0;
 		color: var(--accent);
 	}
 
-	.logo a {
-		color: #e74c3c;
-		font-family: 'Signika', sans-serif;
-		font-weight: 300;
-		font-size: 1.6rem;
-		line-height: 1.3;
-	}
-
-	.logo a span {
-		background: #e74c3c;
-		color: #fff;
-		display: inline-block;
-		line-height: 1.8;
-		padding: 0 1.5rem;
+	.logo a img {
+		width: 140px;
+		height: auto;
 	}
 
 	.links {
@@ -79,5 +85,12 @@
 
 	a {
 		text-decoration: none;
+	}
+
+	@media (max-width: 400px) {
+		.logo a img {
+			width: 80px;
+			height: auto;
+		}
 	}
 </style>
